@@ -7,7 +7,7 @@ class SongsController < ApplicationController
       else
         @songs = @artist.songs
       end
-    else 
+    else
       @songs = Song.all
     end
   end
@@ -59,4 +59,3 @@ class SongsController < ApplicationController
     params.require(:song).permit(:title, :artist_name)
   end
 end
-
